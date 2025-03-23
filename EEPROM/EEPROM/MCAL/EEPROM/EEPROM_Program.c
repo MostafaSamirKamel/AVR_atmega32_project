@@ -5,6 +5,8 @@
  *  Author: Mostafa Samir
  */ 
 
+#define F_CPU 8000000UL
+#include <util/delay.h>
 /* Include Header Files From LIB */
 #include "../../LIB/STD_TYPES.h"
 #include "../../LIB/BIT_MATH.h"
@@ -32,8 +34,6 @@ u8 EEPROM_u8Read_eeprom(u16 Copy_u16Address)
 
 void EEPROM_voidWrite_eeprom(u16 Copy_u16Address, u8 Copy_u16DATA)
 {
-	/* wait for completion of  write operation */
-	while(GET_BIT(EECR_REG,EEWE_BIT)==1);
 	
 	/*set up address register*/
 	EEARL_REG = (u8)Copy_u16Address;
@@ -50,6 +50,8 @@ void EEPROM_voidWrite_eeprom(u16 Copy_u16Address, u8 Copy_u16DATA)
 	
 	/*start EEPROM write by setting EEWE*/
 	SET_BIT(EECR_REG,EEWE_BIT);
+	
+	_delay_ms(500);
 	
 	
 	/* wait for completion of  write operation */

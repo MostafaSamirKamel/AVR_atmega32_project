@@ -1040,7 +1040,7 @@
 #define L1022 0x03FE
 #define L1023 0x03FF
 
-
+#define Defulte  0xFF
 
 void EEPROM_voidRead_eeprom(u16 Copy_u16Address);
 

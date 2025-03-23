@@ -15,15 +15,14 @@
 
 int main(void)
 {
-	EEPROM_voidWrite_eeprom(L30,10);
-	_delay_ms(1000);
-	EEPROM_voidWrite_eeprom(L31,6);
-	EEPROM_voidWrite_eeprom(L32,4);
-	_delay_ms(1000);
-	EEPROM_voidWrite_eeprom(L33,5);
 	
-	//EEPROM_voidWrite_eeprom(L15,3);
-    
+	EEPROM_voidWrite_eeprom(L0,0);
+	EEPROM_voidWrite_eeprom(L1,1);
+	EEPROM_voidWrite_eeprom(L2,2);
+	EEPROM_voidWrite_eeprom(L3,3);
+	
+	
+	
 	
     while (1) 
     {
