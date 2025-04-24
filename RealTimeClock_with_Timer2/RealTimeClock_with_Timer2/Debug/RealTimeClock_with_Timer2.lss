@@ -2022,9 +2022,9 @@ void TIMER2_voidInit()
 {
 	// Set to use external 32.768 kHz crystal oscillator
 	SET_BIT(ASSR_REG, AS2_BIT); // Use the external crystal oscillator
- cfa:	80 b7       	in	r24, 0x30	; 48
+ cfa:	82 b5       	in	r24, 0x22	; 34
  cfc:	88 60       	ori	r24, 0x08	; 8
- cfe:	80 bf       	out	0x30, r24	; 48
+ cfe:	82 bd       	out	0x22, r24	; 34
 	
 	// Set Timer2 in normal mode (overflow mode)
 	CLEAR_BIT(TCCR2_REG, TIMER2_TCCR2_WGM20); // Clear WGM20 for Normal mode

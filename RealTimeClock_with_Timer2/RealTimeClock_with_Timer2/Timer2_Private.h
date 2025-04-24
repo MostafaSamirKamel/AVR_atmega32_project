@@ -19,6 +19,8 @@
 #define     OCR2_REG         *((volatile u8*)0x43)     // Output Compare Register 2
 #define     TIMSK_REG        *((volatile u8*)0x59)     // Timer/Counter Interrupt Mask Register (shared)
 #define     TIFR_REG         *((volatile u8*)0x58)     // Timer/Counter Interrupt Flag Register (shared)
+#define     ASSR_REG	     *((volatile u8*)0X42) 
+#define     AS2_BIT           3
 /* SREG */
 #define SREG_REG             *((volatile u8*)0x5F)
 #define GINT_BIT             7
@@ -41,7 +43,7 @@
 #define     TIMER2_TIFR_TOV2           6              // Timer/Counter2 Overflow Flag
 #define     TIMER2_TIFR_OCF2           7              // Timer/Counter2 Output Compare Flag
 
-#define  AS2_BIT     3
-#define  ASSR_REG	*((volatile u8*)0x50) 
+
+
 
 #endif /* TIMER2_PRIVATE_H_ */
